@@ -22,7 +22,29 @@ public class TimeGame : MonoBehaviour
             float playerWaitTime = Time.time - roundStartTime;
             float error = Mathf.Abs(waitTime - playerWaitTime);
 
-            print("You waited for " + playerWaitTime + " seconds. That's " + error + " seconds off.");
+            string message = "";
+            if (error < .15f)
+            {
+                message = "Outstanding!";
+            }
+            else if(error < .75f)
+            {
+                message = "Exceeds Expectation.";
+            }
+            else if(error < 1.25f)
+            {
+                message = "Acceptable.";
+            }
+            else if(error < 1.75f)
+            {
+                message = "Bad.";
+            }
+            else
+            {
+                message = "Dreadful.";
+            }
+
+            print("You waited for " + playerWaitTime + " seconds. That's " + error + " seconds off. " + message);
             SetNewRandomTime();
         }
     }
