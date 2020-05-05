@@ -2,10 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+[Aa]ssets/AssetStoreTools*
+[Bb]uild/
 [Ll]ibrary/
-[Tt]emp/
+[Ll]ocal[Cc]ache/
 [Oo]bj/
-
+[Tt]emp/
+[Uu]nityGenerated/
 
 [Ll]ogs/
 [Mm]emoryCaptures/
